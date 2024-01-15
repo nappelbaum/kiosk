@@ -1,0 +1,42 @@
+.container {
+  max-width: $container-width;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+  position: relative;
+  z-index: 15;
+
+  @media (min-width: 1920px) {
+    max-width: 1680px;
+  }
+  @media (min-width: 2100px) {
+    max-width: 1820px;
+  }
+  @media (max-width: 1025px) {
+    padding: 0 calc($container-padding / 1.6);
+    z-index: unset;
+  }
+  @media (max-width: 700px) {
+    padding: 0 20px;
+  }
+}
+
+body {
+  @media (max-width: 1025px) {
+    background: $section-background;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="fonts/Lato/stylesheet.css" />
+    <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <script defer src="./js/header.bundle.js"></script>
+    <script defer src="./js/main.bundle.js"></script>
+  </head>
+  <body>
+    @@include("./blocks/header.html") @@include("./blocks/nav.html")
+
+    <section class="hero-banner">
+      <div class="hero-banner__back"></div>
+      <div class="container">
+        <div class="hero-caption">
+          <p class="hero-caption__subtitle">Работаем по всей России</p>
+          <h1 class="hero-caption__title">
+            Изготовление уличных стендов и рекламных конструкций
+          </h1>
+          <p class="hero-caption__caption">
+            Мы предлагаем широкий спектр уличных стендов и рекламных
+            конструкций, которые могут быть адаптированы под любые потребности и
+            требования вашего бизнеса
+          </p>
+          <a href="#works" class="hero-caption__btn">
+            <span>Узнать подробнее</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-banner-mob">
+      <div class="container">
+        <div class="hero-banner-mob__row">
+          <div class="hero-banner-mob__hero-caption">
+            <div class="hero-caption">
+              <p class="hero-caption__subtitle">Работаем по всей России</p>
+              <p class="hero-caption__title">
+                Изготовление уличных стендов и рекламных конструкций
+              </p>
+              <p class="hero-caption__caption">
+                Мы предлагаем широкий спектр уличных стендов и рекламных
+                конструкций, которые могут быть адаптированы под любые
+                потребности и требования вашего бизнеса
+              </p>
+              <a href="#production" class="hero-caption__btn">
+                <span>Узнать подробнее</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-banner-mob__slider">
+            <img src="./img/hero-banner/Mobgroup.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works">
+      <div class="container">
+        <h1>Наши Работы</h1>
+        <div class="works__wrapper">
+          <div class="works__work-block">
+            <a href="/item.html" class="works__img">
+              <img src="./img/works/stend.jpg" alt="" />
+            </a>
+            <a href="/item.html" class="works__caption"
+              ><span>Название прекраснейшего объекта</span></a
+            >
+          </div>
+          <div class="works__work-block">
+            <a href="/item.html" class="works__img">
+              <img src="./img/works/stend2.jpg" alt="" />
+            </a>
+            <a href="/item.html" class="works__caption"
+              ><span>Название не менее прекрасного объекта</span></a
+            >
+          </div>
+          <div class="works__work-block">
+            <a href="/item.html" class="works__img">
+              <img src="./img/works/stend3.jpg" alt="" />
+            </a>
+            <a href="/item.html" class="works__caption"
+              ><span>Название объекта номер три или четыре</span></a
+            >
+          </div>
+          <div class="works__work-block">
+            <div class="works__img">
+              <img src="./img/works/stend4.jpg" alt="" />
+            </div>
+            <div class="works__caption">
+              <span>Название супер великолепного объекта</span>
+            </div>
+          </div>
+          <div class="works__work-block">
+            <div class="works__img">
+              <img src="./img/works/stend.jpg" alt="" />
+            </div>
+            <div class="works__caption"><span>Название объекта</span></div>
+          </div>
+          <div class="works__work-block">
+            <div class="works__img">
+              <img src="./img/works/stend.jpg" alt="" />
+            </div>
+            <div class="works__caption"><span>Название объекта</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="production" id="production">
+      <div class="container">
+        <div class="production__row">
+          <div class="swiper production__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide production__img">
+                <img src="./img/production/slider/stend.jpg" alt="" />
+              </div>
+              <div class="swiper-slide production__img">
+                <img src="./img/production/slider/stend2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide production__img">
+                <img src="./img/production/slider/stend3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide production__img">
+                <img src="./img/production/slider/stend4.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="slider-control">
+              <div class="slider-control__left">
+                <img src="./img/slider/leftArrow.svg" alt="" />
+              </div>
+              <div class="slider-control__center">
+                <div><span class="slider-control_active">1</span>/4</div>
+              </div>
+              <div class="slider-control__right">
+                <img src="./img/slider/rightArrow.svg" alt="" />
+              </div>
+            </div>
+
+            <ol class="slider-indicators">
+              <li class="active"><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ol>
+          </div>
+          <div class="production__caption">
+            <h1>Наше производство</h1>
+            <div class="production__description">
+              Наше производство123 - это чистое и светлое помещение, где каждый
+              день происходит кропотливая работа. Аккуратность и точность -то,
+              на чем мы делаем акцент, ведь реклама — это о вас, о вашем о вашем
+              образе, а значит каждая деталь должна быть тщательно и вдумчиво
+              проработана. У нас для этого есть все необходимое, приезжайте в
+              гости знакомиться! 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include("./blocks/feedback.html") @@include("./blocks/footer.html")
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </body>
+</html>

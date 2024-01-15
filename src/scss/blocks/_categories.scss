@@ -1,0 +1,41 @@
+.categories {
+  border-radius: $section-border-radius;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 240, 240, 0) 0%,
+    $section-background 100%
+  );
+  padding-top: clamp(40px, 4.6vw, 110px);
+  padding-bottom: clamp(28px, 4.6vw, 110px);
+  color: #797979;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+
+  .menu {
+    .menu-item + .menu-item {
+      margin-top: 10px;
+    }
+
+    .menu-item:first-child {
+      color: #1c1c1c;
+      @include adaptiv-font(40, 8);
+      line-height: 120%;
+      text-transform: uppercase;
+      margin-bottom: 1.6vw;
+
+      @media (max-width: 700px) {
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+
+    .current-menu-item {
+      color: #4ea4b3;
+    }
+
+    @media (max-width: 700px) {
+      text-align: center;
+    }
+  }
+}

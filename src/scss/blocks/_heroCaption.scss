@@ -1,0 +1,88 @@
+.hero-caption {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.hero-caption__subtitle {
+  color: #f69347;
+  @include adaptiv-font(22, 6);
+  line-height: 140%;
+  text-transform: uppercase;
+  margin-top: 6.8vw;
+  width: 62%;
+
+  @media (min-width: 2200px) {
+    margin-top: 120px;
+  }
+  @media (max-width: 700px) {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.hero-caption__title {
+  color: #1c1c1c;
+  @include adaptiv-font(50, 10);
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-top: 0.52vw;
+  width: 58%;
+  @media (max-width: 700px) {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+.hero-caption__caption {
+  color: rgba(28, 28, 28, 0.7);
+  @include adaptiv-font(18, 8);
+  font-weight: 600;
+  line-height: 140%;
+  margin-top: 1.5vw;
+  width: 42.14%;
+
+  @media (max-width: 1840px) {
+    width: 40%;
+  }
+  @media (max-width: 700px) {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.hero-caption__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(180px, 14.53vw, 280px);
+  height: clamp(38px, 3.7vw, 70px);
+  border-radius: 1vw;
+  background: $header-btn-background;
+  margin-top: 2vw;
+  cursor: pointer;
+
+  @media (max-width: 700px) {
+    font-size: 12px;
+    width: 50%;
+    height: 30px;
+    margin: 2vw auto;
+  }
+  @media (max-width: 400px) {
+    width: 70%;
+    height: 40px;
+  }
+
+  &:focus-visible {
+    border: 2px solid #000;
+  }
+
+  span {
+    color: #fff;
+    font-family: Montserrat;
+    @include adaptiv-font(16, 9);
+    font-weight: 700;
+    @media (max-width: 700px) {
+      font-size: 12px;
+    }
+  }
+}

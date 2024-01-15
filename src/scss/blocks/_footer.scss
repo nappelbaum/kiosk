@@ -1,0 +1,136 @@
+.footer {
+  color: #82858d;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 1vw;
+  padding-top: clamp(40px, 4.4vw, 94px);
+  padding-bottom: clamp(40px, 4.4vw, 94px);
+  border-radius: $section-border-radius;
+  background-color: $section-background;
+
+  .footer__wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    column-gap: clamp(20px, 4vw, 50px);
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h3 {
+      @include adaptiv-font(19, 13);
+      color: #1c1c1c;
+      font-weight: 700;
+    }
+
+    a,
+    span {
+      @include adaptiv-font(16, 12);
+      font-weight: 500;
+    }
+
+    .footer__content {
+      width: 50%;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      column-gap: clamp(20px, 4vw, 50px);
+
+      > div {
+        flex: 0 1 50%;
+
+        a {
+          display: block;
+
+          span {
+            display: block;
+          }
+        }
+
+        > *:not(:last-child) {
+          margin-bottom: clamp(14px, 1.5vw, 30px);
+        }
+      }
+
+      .footer__customers {
+        > *:nth-child(2) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    .footer__contacts {
+      width: 25%;
+
+      > *:not(:last-child) {
+        margin-bottom: clamp(14px, 1.5vw, 30px);
+      }
+
+      > div {
+        span {
+          display: block;
+
+          &:first-child {
+            color: #1c1c1c;
+            font-weight: 600;
+            opacity: 0.7;
+          }
+          &:last-child {
+            font-weight: 400;
+          }
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+        margin-top: 54px;
+      }
+    }
+  }
+
+  .footer__basement {
+    margin-top: clamp(30px, 3vw, 54px);
+    border-top: 1px solid rgba(18, 52, 83, 0.1);
+    padding-top: clamp(30px, 3vw, 54px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer__col-left {
+      @include adaptiv-font(16, 12);
+      color: #1c1c1c;
+      font-weight: 400;
+      line-height: 140%;
+      margin-right: 4vw;
+
+      a {
+        display: inline-block;
+        margin-top: 4px;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        text-align: center;
+      }
+    }
+
+    .footer__col-right {
+      width: 25%;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+
+      img {
+        width: clamp(115px, 12vw, 220px);
+      }
+    }
+  }
+}

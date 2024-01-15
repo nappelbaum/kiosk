@@ -1,0 +1,215 @@
+.feedback {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1vw;
+  padding-top: clamp(40px, 4.4vw, 94px);
+  padding-bottom: clamp(40px, 4.4vw, 94px);
+  border-radius: $section-border-radius;
+  background-color: $header-btn-background;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 30vw;
+    top: -16.7vw;
+    width: 89.6vw;
+    min-height: 57.6vw;
+    background-image: url("../img/feedback/Group911.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+  }
+
+  @media (max-width: 1250px) {
+    .feedback_container {
+      padding: 0 32px;
+      z-index: 1;
+    }
+  }
+
+  .feedback__row {
+    display: flex;
+    align-items: center;
+
+    .feedback__caption {
+      flex: 0 1 50%;
+      margin-right: 0.65vw;
+
+      @media (max-width: 800px) {
+        flex: 0 1 40%;
+      }
+
+      h1 {
+        max-width: 73.5%;
+        @include adaptiv-font(40, 8);
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+
+      p {
+        max-width: 50%;
+        margin-top: 2vw;
+        @include adaptiv-font(19, 8);
+        font-weight: 500;
+        line-height: 160%;
+
+        @media (max-width: 800px) {
+          max-width: 70%;
+        }
+      }
+    }
+
+    .feedback__form {
+      flex: 0 1 50%;
+      margin-left: 0.65vw;
+
+      @media (max-width: 800px) {
+        flex: 0 1 60%;
+      }
+
+      input {
+        display: inline-block;
+        width: 100%;
+        height: clamp(40px, 3.8vw, 70px);
+        padding-left: clamp(11px, 1.7vw, 1.7vw);
+        border: none;
+        border-radius: 1.3vw;
+        margin-bottom: clamp(8px, 0.8vw, 20px);
+        font-family: Montserrat;
+        @include adaptiv-font(18, 12);
+        background-color: #fff;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: rgba(28, 28, 28, 0.7);
+          font-family: Montserrat;
+          @include adaptiv-font(18, 10);
+          font-weight: 600;
+          line-height: 140%;
+          opacity: 0.7;
+        }
+
+        &::-webkit-input-placeholder {
+          color: rgba(28, 28, 28, 0.7);
+          font-family: Montserrat;
+          @include adaptiv-font(18, 10);
+          font-weight: 600;
+          line-height: 140%;
+          opacity: 0.7;
+        }
+        &:-moz-placeholder {
+          color: rgba(28, 28, 28, 0.7);
+          font-family: Montserrat;
+          @include adaptiv-font(18, 10);
+          font-weight: 600;
+          line-height: 140%;
+          opacity: 0.7;
+        }
+      }
+
+      .feedback__btn-wrapper {
+        width: 100%;
+        margin-top: 1vw;
+        display: flex;
+        align-items: center;
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 40%;
+          height: clamp(40px, 3.8vw, 70px);
+          margin-right: 1.5vw;
+          border-radius: 1vw;
+          background: #f69347;
+          cursor: pointer;
+
+          span {
+            text-align: center;
+            color: #fff;
+            text-align: center;
+            font-family: Montserrat;
+            @include adaptiv-font(18, 12);
+            font-weight: 700;
+          }
+        }
+
+        p {
+          @include adaptiv-font(18, 8);
+          font-weight: 500;
+          line-height: 160%;
+        }
+
+        @media (max-width: 420px) {
+          flex-direction: column;
+          margin-top: 2px;
+          justify-content: center;
+
+          button {
+            flex: 0 0 auto;
+            width: 100%;
+            margin: 0 0 4px 0;
+            span {
+              font-size: 14px;
+            }
+          }
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .feedback__caption {
+        margin: 0;
+
+        h1,
+        p {
+          max-width: 100%;
+          text-align: center;
+        }
+        h1 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .feedback__form {
+        input {
+          font-size: 16px;
+          &::placeholder {
+            font-size: 14px;
+          }
+          &::-webkit-input-placeholder {
+            font-size: 14px;
+          }
+          &:-moz-placeholder {
+            font-size: 14px;
+          }
+        }
+
+        .feedback__btn-wrapper {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.hero-banner {
+  width: 100%;
+  min-height: $hero-height;
+  position: relative;
+  overflow: hidden;
+  border-radius: $section-border-radius;
+
+  @media (min-width: 1920px) {
+    min-height: 832px;
+  }
+  @media (max-width: 1025px) {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(240, 240, 240, 0) 0%,
+      $section-background 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 42%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(240, 240, 240, 0) 0%,
+      $section-background 100%
+    );
+  }
+
+  .hero-banner__back {
+    position: absolute;
+    top: 4.6354vw;
+    left: 29vw;
+    width: 89vw;
+    min-height: 57vw;
+    background-image: url(../img/hero-banner/Group911.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18.6%;
+      height: 32.74%;
+      left: 32%;
+      top: 13%;
+      background-image: url(../img/hero-banner/GroupFrameSmall.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 51.2%;
+      left: 42.2%;
+      top: 3.8%;
+      background-image: url(../img/hero-banner/GroupFrameBig.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+  }
+}
+
+.hero-banner-mob {
+  display: none;
+  @media (max-width: 1025px) {
+    display: block;
+  }
+  @media (max-width: 700px) {
+    margin-top: 18px;
+  }
+
+  .hero-banner-mob__row {
+    display: flex;
+    max-height: 50vw;
+
+    @media (max-width: 700px) {
+      max-height: fit-content;
+    }
+
+    .hero-banner-mob__hero-caption {
+      padding-right: 2vw;
+      @media (max-width: 700px) {
+        padding-right: 0;
+      }
+
+      .hero-caption {
+        flex: 0 0 50%;
+        border-radius: 10px;
+        background: #fcfcfc;
+        padding: 7vw 3vw 5vw 3vw;
+        height: 100%;
+
+        @media (max-width: 700px) {
+          height: auto;
+          padding: 20px 10px;
+
+          .hero-caption__title,
+          .hero-caption__caption,
+          .hero-caption__btn {
+            margin-top: 10px;
+          }
+        }
+
+        .hero-caption__subtitle {
+          margin-top: 0;
+        }
+
+        .hero-caption__subtitle,
+        .hero-caption__title,
+        .hero-caption__caption {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 700px) {
+        flex: 0 0 100%;
+      }
+    }
+
+    .hero-banner-mob__slider {
+      flex: 0 0 50%;
+      height: 100%;
+      border-radius: 10px;
+      background: $header-btn-background;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.temp {
+  margin-top: clamp(40px, 4.6vw, 110px);
+  margin-bottom: clamp(46px, 4.6vw, 110px);
+  color: #797979;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  @include adaptiv-font(40, 14);
+}

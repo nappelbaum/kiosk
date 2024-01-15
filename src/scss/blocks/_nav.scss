@@ -1,0 +1,30 @@
+.nav {
+  margin-top: -1vw;
+
+  .nav__list {
+    border-top: 1px solid rgba(18, 52, 83, 0.1);
+    padding-top: calc($header-padding-tb / 2);
+    display: flex;
+    align-items: center;
+    column-gap: 2vw;
+    color: #3f3f3f;
+    font-family: Montserrat;
+    @include adaptiv-font(17, 8);
+    font-weight: 500;
+    line-height: 92.07%;
+
+    a {
+      transition: color 0.2s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $header-btn-background;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    display: none;
+  }
+}

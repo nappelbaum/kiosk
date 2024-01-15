@@ -1,0 +1,306 @@
+.item {
+  color: #1c1c1c;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  @include adaptiv-font(18, 10);
+  padding-top: clamp(24px, 5vw, 100px);
+  padding-bottom: clamp(36px, 5.4vw, 80px);
+
+  @media (max-width: 1025px) {
+    padding-top: 22px;
+  }
+
+  .item__top-wrapper {
+    display: flex;
+    align-items: start;
+
+    @media (max-width: 780px) {
+      flex-direction: column;
+    }
+
+    > div {
+      flex: 0 1 50%;
+    }
+
+    .item__swiper-container {
+      overflow: hidden;
+      width: 100%;
+
+      .item__slider {
+        .item__img {
+          width: 100%;
+          height: clamp(200px, 25vw, 445px);
+          overflow: hidden;
+          border-radius: clamp(5px, 0.5vw, 18px);
+          user-select: none;
+          cursor: pointer;
+
+          @media (max-width: 1025px) {
+            height: clamp(200px, 35vw, 445px);
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          cursor: pointer;
+
+          &.swiper-button-disabled {
+            pointer-events: visible;
+          }
+
+          &::after {
+            display: none;
+          }
+
+          @media (max-width: 780px) {
+            display: none;
+          }
+        }
+
+        .swiper-button-prev {
+          left: 0;
+        }
+        .swiper-button-next {
+          right: 0;
+        }
+      }
+
+      .swiper_thumbnail {
+        margin-top: clamp(10px, 1.5vw, 25px);
+        margin-left: clamp(-3px, -0.35vw, -10px);
+        margin-right: clamp(-3px, -0.35vw, -10px);
+        overflow: hidden;
+        position: relative;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            height: clamp(80px, 10vw, 150px);
+            padding: 0 clamp(3px, 0.35vw, 10px);
+
+            @media (max-width: 480px) {
+              height: 60px;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 2px;
+              object-fit: cover;
+              cursor: pointer;
+              outline: 3px solid rgba(226, 42, 42, 0);
+              outline-offset: -3px;
+              transition: outline 500ms ease-out;
+
+              @media (max-width: 400px) {
+                outline: 2px solid rgba(226, 42, 42, 0);
+                outline-offset: -2px;
+              }
+            }
+
+            &.swiper-slide-thumb-active {
+              img {
+                outline: 3px solid rgba(226, 42, 42, 1);
+                outline-offset: -3px;
+
+                @media (max-width: 400px) {
+                  outline: 2px solid rgba(226, 42, 42, 1);
+                  outline-offset: -2px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .item__content {
+      padding-left: 4.2vw;
+
+      @media (max-width: 780px) {
+        padding-left: 0;
+        margin-top: 30px;
+      }
+
+      > *:not(:last-child) {
+        margin-bottom: clamp(5px, 0.5vw, 10px);
+      }
+
+      .item__subtitle {
+        @include adaptiv-font(20, 11);
+        opacity: 0.7;
+      }
+
+      .item__title,
+      .item__cost {
+        @include adaptiv-font(40, 8);
+        font-weight: 700;
+
+        @media (max-width: 1025px) {
+          @include adaptiv-font(32, 21);
+        }
+      }
+
+      .item__article {
+        @media (max-width: 800px) {
+          font-size: 12px;
+        }
+      }
+
+      .item__description {
+        margin-top: clamp(14px, 3vw, 25px);
+        line-height: 140%;
+
+        @media (max-width: 800px) {
+          font-size: 12px;
+        }
+
+        span {
+          display: block;
+          margin-bottom: clamp(7px, 1vw, 20px);
+        }
+      }
+
+      .item__cost {
+        color: #1f7b95;
+      }
+
+      .item__btn {
+        display: inline-block;
+        border-radius: clamp(8px, 1vw, 10px);
+        padding: 14px 26px;
+        margin-top: clamp(8px, 1vw, 14px);
+        border: 2px solid #a9a6a6;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media (max-width: 500px) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          font-size: 13px;
+        }
+
+        span {
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.info {
+  color: #1c1c1c;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  @include adaptiv-font(18, 10);
+  padding-bottom: clamp(36px, 4vw, 100px);
+
+  .info__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: clamp(25px, 2.5vw, 50px);
+    border-radius: 25px;
+    background-color: #f0f0f0;
+
+    @media (max-width: 1025px) {
+      background-color: #fbf9f4;
+    }
+
+    @media (min-width: 1600px) {
+      border-radius: 100px;
+    }
+
+    > div + div {
+      margin-left: 2px;
+    }
+
+    .info__nav-btn {
+      font-weight: 600;
+      line-height: 133.2%;
+      padding: clamp(14px, 1.1vw, 20px) clamp(35px, 4vw, 50px);
+      border-radius: 100px;
+      background-color: transparent;
+      transition: background-color 0.3s;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      cursor: pointer;
+
+      &.active {
+        color: #fff;
+        background-color: #1c7b95;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 2px #808080, 0 0 10px #909396;
+        transition: 0.3s;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 740px) {
+      flex-direction: column;
+      background-color: transparent;
+      align-items: stretch;
+
+      .info__nav-btn {
+        outline: 1px solid #a9a9a9;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .info__content {
+    color: #07141c;
+    line-height: 140%;
+
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
+
+    .info__paragraph {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.8s;
+
+      &.active {
+        position: inherit;
+        width: inherit;
+        height: inherit;
+        margin: inherit;
+        border: inherit;
+        padding: inherit;
+        clip: inherit;
+        overflow: inherit;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
