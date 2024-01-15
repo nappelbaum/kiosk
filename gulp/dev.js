@@ -1,10 +1,12 @@
 const gulp = require("gulp");
 const fileInclude = require("gulp-file-include");
 const sass = require("gulp-sass")(require("sass"));
+const sourceMaps = require("gulp-sourcemaps");
+const autoprefixer = require("gulp-autoprefixer");
+const csso = require("gulp-csso");
 const server = require("gulp-server-livereload");
 const clean = require("gulp-clean");
 const fs = require("fs");
-const sourceMaps = require("gulp-sourcemaps");
 const webpack = require("webpack-stream");
 const babel = require("gulp-babel");
 const imagemin = require("gulp-imagemin");
@@ -31,6 +33,8 @@ gulp.task("sass:dev", () => {
     .pipe(changed("./build/css/"))
     .pipe(sourceMaps.init())
     .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(csso())
     .pipe(sourceMaps.write())
     .pipe(gulp.dest("./build/css/"));
 });
